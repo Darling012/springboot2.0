@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring-boot-autoconfigure" />
+        <module name="spring-boot-autoconfigure-test" />
+        <module name="spring-boot-overview" />
+        <module name="spring-boot-servlet" />
+        <module name="spring-boot-spring-application" />
+        <module name="spring-servlet" />
+        <module name="spring-webmvc" />
+        <module name="springboot-rest" />
+        <module name="springboot-view" />
+        <module name="springboot-webmvc" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="dive-in-spring-boot" target="1.8" />
+      <module name="spring-boot-autoconfigure" target="1.8" />
+      <module name="spring-boot-autoconfigure-test" target="1.8" />
+      <module name="spring-boot-overview" target="1.8" />
+      <module name="spring-boot-servlet" target="1.8" />
+      <module name="spring-boot-spring-application" target="1.8" />
+      <module name="spring-servlet" target="1.8" />
+      <module name="spring-webmvc" target="1.8" />
+      <module name="springboot-rest" target="1.8" />
+      <module name="springboot-view" target="1.8" />
+      <module name="springboot-webmvc" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
