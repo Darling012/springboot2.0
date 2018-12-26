@@ -12,8 +12,9 @@ import org.springframework.core.Ordered;
  */
 public class AfterHelloWorldApplicationContextInitializer implements ApplicationContextInitializer, Ordered {
      public AfterHelloWorldApplicationContextInitializer(){
-         System.out.println("11111111111111111");
+         System.out.println("初始化AfterHelloWorldApplicationContextInitializer");
      }
+
     @Override
     public void initialize(ConfigurableApplicationContext applicationContext) {
         System.out.println("After application.id ===================== " + applicationContext.getId());

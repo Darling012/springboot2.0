@@ -37,14 +37,14 @@ public class WebMvcConfig implements WebMvcConfigurer {
         return viewResolver;
     }
 
-    @Override
-    public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new HandlerInterceptor() {
-            @Override
-            public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-                System.out.println("拦截中...");
-                return true;
-            }
-        });
-    }
+    // @Override
+    // public void addInterceptors(InterceptorRegistry registry) {
+    //     registry.addInterceptor(new HandlerInterceptor() {
+    //         @Override
+    //         public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+    //             System.out.println("拦截中...");
+    //             return true;
+    //         }
+    //     });
+    // }
 }

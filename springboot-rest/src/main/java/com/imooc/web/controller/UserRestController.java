@@ -17,6 +17,7 @@ public class UserRestController {
     @PostMapping(value = "/echo/user",
             consumes = "application/*;charset=UTF-8",
             produces = "application/json;charset=UTF-8")
+    // @PostMapping(value = "/echo/user")
     public User user(@RequestBody User user) {
         return user;
     }

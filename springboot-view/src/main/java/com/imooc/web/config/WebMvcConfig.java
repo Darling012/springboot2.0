@@ -32,7 +32,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
 //        <!--<property name="suffix" value=".jsp"/>-->
 //    <!--</bean>-->
     @Bean
-    public ViewResolver myViewResolver() {
+    public ViewResolver MyViewResolver() {
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
         viewResolver.setViewClass(JstlView.class);
         viewResolver.setPrefix("/WEB-INF/jsp/");

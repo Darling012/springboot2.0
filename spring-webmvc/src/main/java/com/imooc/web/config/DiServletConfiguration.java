@@ -10,5 +10,5 @@ import org.springframework.web.servlet.DispatcherServlet;
  * @since 2018/5/21
  */
 @ComponentScan(basePackages = "com.imooc.web")
-public class DispatcherServletConfiguration {
+public class DiServletConfiguration {
 }

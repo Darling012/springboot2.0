@@ -1,6 +1,6 @@
 package com.imooc.web.servlet.support;
 
-import com.imooc.web.config.DispatcherServletConfiguration;
+import com.imooc.web.config.DiServletConfiguration;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 /**
@@ -18,7 +18,7 @@ public class DefaultAnnotationConfigDispatcherServletInitializer extends
 
     @Override
     protected Class<?>[] getServletConfigClasses() { // DispatcherServlet
-        return new Class[]{DispatcherServletConfiguration.class};
+        return new Class[]{DiServletConfiguration.class};
     }
 
     @Override

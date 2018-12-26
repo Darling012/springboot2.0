@@ -50,12 +50,12 @@ public class RestWebMvcConfigurer implements WebMvcConfigurer {
         requestMappingHandlerAdapter.setReturnValueHandlers(newHandlers);
     }
 
-
+    @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**").allowedOrigins("*");
     }
 
-
+    @Override
     public void addArgumentResolvers(List<HandlerMethodArgumentResolver> resolvers) {
         // 添加 PropertiesHandlerMethodArgumentResolver 到集合首位
         // 添加自定义 HandlerMethodArgumentResolver，优先级低于内建 HandlerMethodArgumentResolver
@@ -66,10 +66,15 @@ public class RestWebMvcConfigurer implements WebMvcConfigurer {
 //        }
 
     }
-
+    @Override
     public void extendMessageConverters(List<HttpMessageConverter<?>> converters) {
         // 不建议添加到 converters 的末尾
 //        converters.add(new PropertiesHttpMessageConverter());
 //        converters.set(0, new PropertiesHttpMessageConverter()); // 添加到集合首位
+    }
+
+    @Override
+    public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
+        // converters.add(new ToStringHttpMessageConverter());
     }
 }

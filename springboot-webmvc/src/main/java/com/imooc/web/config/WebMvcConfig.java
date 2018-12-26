@@ -1,5 +1,6 @@
 package com.imooc.web.config;
 
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -12,6 +13,8 @@ import org.springframework.web.servlet.view.JstlView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Spring Web MVC 配置（类）
@@ -20,7 +23,7 @@ import javax.servlet.http.HttpServletResponse;
  * @since 2018/5/20
  */
 @Configuration
-//@EnableWebMvc
+// @EnableWebMvc
 public class WebMvcConfig implements WebMvcConfigurer {
 
 //     <!--<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
@@ -28,14 +31,15 @@ public class WebMvcConfig implements WebMvcConfigurer {
 //        <!--<property name="prefix" value="/WEB-INF/jsp/"/>-->
 //        <!--<property name="suffix" value=".jsp"/>-->
 //    <!--</bean>-->
-//    @Bean
-//    public ViewResolver viewResolver(){
-//        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-//        viewResolver.setViewClass(JstlView.class);
-//        viewResolver.setPrefix("/WEB-INF/jsp/");
-//        viewResolver.setSuffix(".jsp");
-//        return viewResolver;
-//    }
+   @Bean
+   public ViewResolver viewResolver(){
+       InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
+       viewResolver.setViewClass(JstlView.class);
+       viewResolver.setPrefix("/WEB-INF/jsp/");
+       viewResolver.setSuffix(".jsp");
+       return viewResolver;
+   }
+
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
