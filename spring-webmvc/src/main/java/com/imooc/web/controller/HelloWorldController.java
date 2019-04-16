@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class HelloWorldController {
 
-    @RequestMapping()
+    @GetMapping("index")
 //     public String index(@RequestParam int value, Model model) {
 // //        model.addAttribute("acceptLanguage",acceptLanguage);
 // //        model.addAttribute("jsessionId",jsessionId);

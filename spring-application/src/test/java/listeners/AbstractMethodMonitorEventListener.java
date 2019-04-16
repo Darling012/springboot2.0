@@ -1,5 +1,8 @@
 package listeners;
 
+/**
+ * 事件监听接口的实现，如何处理
+ */
 public class AbstractMethodMonitorEventListener implements MethodMonitorEventListener{
     @Override
     public void onMethodBegin(MethodMonitorEvent methodMonitorEvent) {
