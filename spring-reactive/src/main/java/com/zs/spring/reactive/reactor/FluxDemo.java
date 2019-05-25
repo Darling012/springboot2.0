@@ -3,7 +3,6 @@ package com.zs.spring.reactive.reactor;
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
 import reactor.core.publisher.Flux;
-import reactor.core.scheduler.Schedulers;
 
 /**
  * @auther: madison
