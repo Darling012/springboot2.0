@@ -1,5 +1,6 @@
 package auto;
 
+import enable.HelloWorldConfiguration;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -13,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
  * @author 小马哥
  * @since 2018/5/15
  */
-@EnableAutoConfiguration
+@EnableAutoConfiguration(exclude = {HelloWorldAutoConfiguration.class})
 public class EnableAutoConfigurationBootstrap {
 
     public static void main(String[] args) {

@@ -39,7 +39,6 @@ public class FluxDemo {
                         subscription.request(1);
                     }
 
-                    @Override
                     public void onNext(String s) {
                         if (count == 2) {
                             throw new RuntimeException("故意抛异常");

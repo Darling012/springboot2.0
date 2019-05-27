@@ -11,6 +11,7 @@ import org.springframework.core.Ordered;
  * @since 2018/5/17
  */
 public class AfterHelloWorldApplicationContextInitializer implements ApplicationContextInitializer, Ordered {
+
      public AfterHelloWorldApplicationContextInitializer(){
          System.out.println("初始化AfterHelloWorldApplicationContextInitializer");
      }

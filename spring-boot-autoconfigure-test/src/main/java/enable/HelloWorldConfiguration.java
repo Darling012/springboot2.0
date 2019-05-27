@@ -1,6 +1,7 @@
 package enable;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 /**
  * HelloWorld 配置
@@ -8,6 +9,7 @@ import org.springframework.context.annotation.Bean;
  * @author 小马哥
  * @since 2018/5/14
  */
+@Configuration
 public class HelloWorldConfiguration {
 
     @Bean

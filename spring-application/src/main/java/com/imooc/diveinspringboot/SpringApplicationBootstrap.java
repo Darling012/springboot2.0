@@ -24,23 +24,24 @@ import java.util.Set;
 // @SpringBootConfiguration
 // @Configuration
 
-@EnableAutoConfiguration
+//@EnableAutoConfiguration
 public class SpringApplicationBootstrap {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringApplicationBootstrap.class,args);
+//        SpringApplication.run(SpringApplicationBootstrap.class,args);
 
-        // Set<String> sources = new HashSet();
-        // // 配置Class 名称
-        // sources.add(ApplicationConfiguration.class.getName());
-        // SpringApplication springApplication = new SpringApplication();
-        // springApplication.setSources(sources);
-        // springApplication.run(args);
+         Set<String> sources = new HashSet();
+         // 配置Class 名称
+         sources.add(ApplicationConfiguration.class.getName());
+         SpringApplication springApplication = new SpringApplication();
+         //sources : a class name, package name, or an XML resource location.
+         springApplication.setSources(sources);
+         springApplication.run(args);
 
-        // new SpringApplicationBuilder(SpringApplicationBootstrap.class)
-        //         // .bannerMode(Banner.Mode.CONSOLE)
-        //         // .web(WebApplicationType.NONE)
-        //         .run(args);
+//         new SpringApplicationBuilder(SpringApplicationBootstrap.class)
+//                 // .bannerMode(Banner.Mode.CONSOLE)
+//                 // .web(WebApplicationType.NONE)
+//                 .run(args);
     }
 
     // @SpringBootApplication

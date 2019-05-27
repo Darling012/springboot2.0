@@ -13,7 +13,7 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
 @Documented
-// @Import(HelloWorldConfiguration.class)
-@Import(HelloWorldImportSelector.class)
+ @Import(HelloWorldConfiguration.class)
+//@Import(HelloWorldImportSelector.class)
 public @interface EnableHelloWorld {
 }

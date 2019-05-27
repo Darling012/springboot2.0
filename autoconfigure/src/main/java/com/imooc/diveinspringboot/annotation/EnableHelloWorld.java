@@ -14,7 +14,9 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
 @Documented
+// servlet 3.0
 // @Import(HelloWorldConfiguration.class)
+// servlet 3.1
 @Import(HelloWorldImportSelector.class)
 public @interface EnableHelloWorld {
 }
