@@ -15,6 +15,7 @@ import java.util.Map;
 public class OnSystemPropertyCondition implements Condition {
 
     @Override
+    // 通过提取出@Profile注解中的value值来与profiles配置信息进行匹配
     public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata) {
 
         Map<String, Object> attributes = metadata.getAnnotationAttributes(ConditionalOnSystemProperty.class.getName());
