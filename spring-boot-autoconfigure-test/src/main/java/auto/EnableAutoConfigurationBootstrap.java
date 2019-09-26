@@ -14,7 +14,8 @@ import org.springframework.context.annotation.Configuration;
  * @author 小马哥
  * @since 2018/5/15
  */
-@EnableAutoConfiguration(exclude = {HelloWorldAutoConfiguration.class})
+@EnableAutoConfiguration()
+//@EnableAutoConfiguration(exclude = {HelloWorldAutoConfiguration.class})
 public class EnableAutoConfigurationBootstrap {
 
     public static void main(String[] args) {

@@ -28,7 +28,7 @@ public class FluxDemo {
 //                            subscription.cancel(); // 取消上游传输数据到下游
 //                        }
 //                )
-                .subscribe(new Subscriber<>() {
+                .subscribe(new Subscriber() {
 
                     private Subscription subscription;
                     private int count = 0;
@@ -37,6 +37,11 @@ public class FluxDemo {
                     public void onSubscribe(Subscription s) {
                         subscription = s;
                         subscription.request(1);
+                    }
+
+                    @Override
+                    public void onNext(Object o) {
+
                     }
 
                     public void onNext(String s) {
