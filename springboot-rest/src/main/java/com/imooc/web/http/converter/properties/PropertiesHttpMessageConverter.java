@@ -28,6 +28,7 @@ public class PropertiesHttpMessageConverter extends AbstractGenericHttpMessageCo
     }
 
     @Override
+    // 为序列化过程，将响应序列化
     protected void writeInternal(Properties properties, Type type, HttpOutputMessage outputMessage) throws IOException, HttpMessageNotWritableException {
         // Properties -> String
         // OutputStream -> Writer
@@ -46,11 +47,13 @@ public class PropertiesHttpMessageConverter extends AbstractGenericHttpMessageCo
     }
 
     @Override
+    // 为反序列化过程，即将HTTP请求反序列化为参数的过程
     protected Properties readInternal(Class<? extends Properties> clazz, HttpInputMessage inputMessage) throws IOException, HttpMessageNotReadableException {
 
         // 字符流 -> 字符编码
-        // 从 请求头 Content-Type 解析编码
+        // 获取请求头
         HttpHeaders httpHeaders = inputMessage.getHeaders();
+        // 从 请求头 Content-Type 解析编码
         MediaType mediaType = httpHeaders.getContentType();
         // 获取字符编码
         Charset charset = mediaType.getCharset();
