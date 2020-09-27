@@ -49,6 +49,7 @@ public class PropertiesHandlerMethodReturnValueHandler implements HandlerMethodR
         HttpOutputMessage message = new ServletServerHttpResponse(response);
         // 通过 PropertiesHttpMessageConverter 输出
         converter.write(properties, mediaType, message);
+        // 在Spring中如果Controller中的方法没有被@ResponseBody标注的话，默认会把返回值当成视图的名称，而这里我们并不希望解析的Properties值被当成视图名称
         // 告知 Spring Web MVC 当前请求已经处理完毕
         mavContainer.setRequestHandled(true);
     }
